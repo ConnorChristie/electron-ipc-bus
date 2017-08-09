@@ -1,5 +1,6 @@
 /// <reference types='node' />
 import events = require('events');
+import { EventEmitter2 as EventEmitter } from 'eventemitter2';
 
 // Special call handlers
 export const IPCBUS_SERVICE_CALL_GETSTATUS: string = '__getServiceStatus';
@@ -42,7 +43,7 @@ export interface IpcBusListener {
     (event: IpcBusEvent, ...args: any[]): void;
 }
 
-export interface IpcBusClient extends events.EventEmitter {
+export interface IpcBusClient extends EventEmitter {
     peer: IpcBusPeer;
 
     connect(timeoutDelayOrPeerName?: number | string, peerName?: string): Promise<string>;

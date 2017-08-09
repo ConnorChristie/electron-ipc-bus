@@ -3,7 +3,7 @@
 import * as IpcBusInterfaces from './IpcBusInterfaces';
 import * as IpcBusUtils from './IpcBusUtils';
 
-import {EventEmitter} from 'events';
+import {EventEmitter2 as EventEmitter} from 'eventemitter2';
 import {IpcBusTransport} from './IpcBusTransport';
 
 
